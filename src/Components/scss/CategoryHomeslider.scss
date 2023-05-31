@@ -1,0 +1,270 @@
+
+
+
+
+
+
+.category-home-slider__card__img{
+    width: 86%;
+    height: 94px !important;
+}
+
+
+.category-gome-slider__card-percentage-container{
+    width: 80% !important;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.category-gome-slider__card-percentage{
+    margin-top: 16px;
+    margin-bottom: -6px;
+    font-weight: 500;
+
+}
+.category-home-slider__card__price-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 16px;
+    
+    .category-home-slider__card__e-price{
+        text-decoration: line-through;
+    }
+    
+    .category-home-slider__card__price{
+        font-weight: 500;
+    }
+    p{
+         
+    margin-top: 8px ;
+
+    }
+}
+
+.category-home-slider__card__product-title{
+    font-weight: 500;
+    margin-top: 26px;
+    margin-bottom: 0px;
+}
+
+.category-home-slider__title-section__see-more-a{
+    border-bottom: 1px solid rgb(136, 136, 136);
+    
+}
+
+.category-home-slider__section-main-container{
+    background-color: #d0cae1;
+    background-color: #eff3f2;
+    background-color: hsl(143, 8%, 96%) ;
+    background-color: hsl(8, 26%, 94%);
+
+
+        
+/* opacity: 0.8;
+background-size: 16px 16px;
+background-image: repeating-linear-gradient(45deg, #e8dddb 0, #eca99e 0.5px, #d0cae1 0, #d0cae1 50%); */
+    /* f */
+    
+    
+}
+
+.category-home-slider__section-container{
+
+  overflow: hidden;
+  width:  100%  ;
+  padding-top: 64px;
+  
+ /*  background-color:#d5d1e2; */
+  padding-bottom: 48px;
+  margin-top: -4px;
+  
+  
+
+    
+   .category-home-slider__title-container{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+        p{
+            font-weight: 500;
+        }
+        div{
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            
+        }
+   }
+  
+
+    #category-home-slider__card-container{
+      
+        text-align: center;
+        display: flex !important;
+        flex-direction: column !important;
+        
+        align-items: center !important;
+        width: 90% !important;
+        max-width: 180px;
+       
+        margin-left: 2px;
+        margin-top: 10px;
+        border: 1px solid #e2e1e1;
+      /*   box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1); */
+        
+       
+        
+        
+        
+       
+        
+       
+       
+        
+        border-radius: 6px;
+       
+        
+
+        img{
+            
+            border-radius:  4px;
+            margin-top: 1em;
+            filter: grayscale(.5);
+        }
+        
+    }
+
+  
+   
+
+    .slick-list{
+        overflow: visible !important;
+    }
+    .slick-slide{
+        margin: 0;
+        
+       
+        
+      div{
+        
+        width: 100%;
+        
+      }
+        
+    }
+  
+    .slick-initialized { overflow: hidden;
+        
+        
+    }
+    .slick-slider{
+       
+        padding-bottom: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+@media (min-width: 430px) {
+    #category-home-slider__card-container{
+      
+      
+        
+       
+        
+        max-width: 360px !important;
+       
+        margin-left: 2px;
+        margin-top: 10px;
+        
+        
+        
+        
+        
+       
+        
+       
+       
+        
+     
+        
+
+     
+        
+    }
+
+  
+   
+}
+
+
+
+
+@media (min-width: 1000px) {
+  
+    .category-home-slider__section-container{
+      
+        width: 80%;
+       
+
+    }
+    .slick-slider{
+       
+        transform: translateX(24px);
+    }
+
+    .category-home-slider__card__img{
+        width: 86%;
+        height: 116px !important;
+    }
+
+    #category-home-slider__card-container{
+      
+        
+        max-width: 210px !important;
+    }
+
+  
+   
+}
+
+@media (min-width: 1200px) {
+  
+    .category-home-slider__section-container{
+      
+        width: 70%;
+       
+
+    }
+   
+
+  
+   
+}
+
+@media (min-width: 1600px) {
+  
+    .category-home-slider__section-container{
+      
+        width: 60%;
+       
+
+    }
+   
+
+  
+   
+}
