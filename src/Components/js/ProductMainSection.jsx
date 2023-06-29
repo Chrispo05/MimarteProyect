@@ -33,7 +33,7 @@ export default function ProductsSection() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('https://api-main-mimarte.azurewebsites.net/api/Product/Lista');
+      const response = await fetch('https://api-mimarte.azurewebsites.net/api/Product/Lista');
       if (!response.ok) {
         throw new Error('Error al obtener los datos');
       }

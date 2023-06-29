@@ -22,7 +22,7 @@
     margin-top: 16px;
     margin-bottom: -6px;
     font-weight: 500;
-
+    
 }
 .category-home-slider__card__price-container{
     display: flex;
@@ -33,6 +33,7 @@
     
     .category-home-slider__card__e-price{
         text-decoration: line-through;
+        color: hsl(8, 57%, 68%);
     }
     
     .category-home-slider__card__price{
@@ -60,7 +61,12 @@
     background-color: #d0cae1;
     background-color: #eff3f2;
     background-color: hsl(143, 8%, 96%) ;
-    background-color: hsl(8, 26%, 94%);
+    background-color: hsl(8, 16%, 94%);
+    background-color: hsl(280, 41%, 90%);
+    background-color: hsl(262, 38%, 94%);
+    
+ 
+    
 
 
         
@@ -117,7 +123,12 @@ background-image: repeating-linear-gradient(45deg, #e8dddb 0, #eca99e 0.5px, #d0
        
         margin-left: 2px;
         margin-top: 10px;
-        border: 1px solid #e2e1e1;
+        border: 1px solid hsl(0, 12%, 89%);
+    
+        background-color:hsl(0, 10%, 95%) ;
+         ;
+        
+        
       /*   box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1); */
         
        

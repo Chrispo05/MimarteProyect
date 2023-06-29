@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {useState, useEffect} from "react";
 import "../scss/CategoryHomeslider.scss"
 import "../../GlobalStyles.scss";
+import PopupProductsContext from "./ProductPopUpContext";
 
 const settings = {
     dots: true,
@@ -88,42 +89,57 @@ export default function CategoryHomeSlider(props) {
             image: "https://picsum.photos/700/400?random=2",
             description: "Descripción del producto 1",
             price: "10.00",
-            elevatedPrice: "70.000"
+            elevatedPrice: "70.000",
+            id: 1
         },
         {
             title: "Pestañina",
             image: "https://picsum.photos/200/300",
             description: "Descripción del producto 2",
             price: "20.00",
-            elevatedPrice: "70.000"
+            elevatedPrice: "70.000",
+            id: 2
         },
         {
             title: "Producto 3",
             image: "https://picsum.photos/700/400?random=1",
             description: "Descripción del producto 3",
             price: "30.00",
-            elevatedPrice: "70.000"
+            elevatedPrice: "70.000",
+            id: 3
         },
         {
             title: "Producto 4",
             image: "https://picsum.photos/700/400?random=2",
             description: "Descripción del producto 4",
             price: "40.00",
-            elevatedPrice: "70.000"
+            elevatedPrice: "70.000",
+            id: 4
         }, {
             title: "Producto 5",
             image: "https://picsum.photos/700/400?random",
             description: "Descripción del producto 5",
             price: "50.00",
-            elevatedPrice: "70.000"
+            elevatedPrice: "70.000",
+            id: 5
         }, {
             title: "Producto 6",
             image: "https://picsum.photos/700/400?random",
             description: "Descripción del producto 6",
             price: "60.00",
-            elevatedPrice: "70.000"
+            elevatedPrice: "70.000",
+            id: 6
         },
     ];
+
+
+    //contexto para la ventana modal que muestra el producto
+    const popUpProductContext = useContext(PopupProductsContext);
+      //funcion para modifical el contexto y la informacion del modal
+        function deployModal(objInfo){
+          popUpProductContext.openPopUp(objInfo)
+          console.log(popUpProductContext)
+        }
 
     return (
         <div className="category-home-slider__section-main-container flex-row-center ">
@@ -137,7 +153,7 @@ export default function CategoryHomeSlider(props) {
             <Slider {...settings}>
                 {
                 allProducts.map((product) => (
-                    <div id="category-home-slider__card-container" className="bg-B-W-100 shadow-A cursor-pointer">
+                    <div onClick={()=> deployModal(product) } id="category-home-slider__card-container" className="bg-B-W-100 shadow-A cursor-pointer" key={product.id}>
                         <div className="category-gome-slider__card-percentage-container">
                             <p className="category-gome-slider__card-percentage font-mobile-small-B">{Number(product.price) * Number(product.elevatedPrice) / 100}% </p>
                         </div>
@@ -160,7 +176,9 @@ export default function CategoryHomeSlider(props) {
                             <p className="font-mobile-small-C category-home-slider__card__e-price"><span>$</span>{
                                 product.elevatedPrice
                             } </p>
+                           
                         </div>
+                        
                     </div>
                 ))
             } </Slider>

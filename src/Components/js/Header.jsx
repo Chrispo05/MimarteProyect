@@ -3,7 +3,8 @@ import mimarteLogo from "../../Icons/mimarteLogo.jpg";
 import { RiSearchFill,RiShoppingBagFill,RiShoppingBag3Line,RiHome6Line } from "react-icons/ri"
 import { AiFillPhone,AiOutlineSearch,AiFillInstagram } from "react-icons/ai"
 import { BiShoppingBag } from "react-icons/bi"
-import pestañaIcon from "../../Icons/pestaña.png"
+import pestañaIcon from "../../Icons/pestaña.png";
+import { Link } from 'react-router-dom';
 
 
 import { BsTelephone,BsFillTelephoneFill } from "react-icons/bs"
@@ -17,6 +18,12 @@ import facebookIcon from "../../Icons/facebook.png";
 import whatsappIcon from "../../Icons/whatsapp.png";
 
 export default function Header() {
+
+    function changeRouting(e){
+
+    }
+
+
     return (
         <header>
             <div className="header__banner-text-container flex-column-center  ">
@@ -50,7 +57,7 @@ export default function Header() {
 
                     <div className="flex-row-center"> <p className="header__navbar__icon-tag header__navbar__icon-tag-inicio " >Inicio</p><RiHome6Line className="header__navbar__icons font-color-40 header__navbar__icon-home"/>   </div>
                    <div className="flex-row-center"> <p className="header__navbar__icon-tag" >Buscador</p>  <AiOutlineSearch className="header__navbar__icons font-color-40"/>  </div>
-                    <div className="flex-row-center header__navbar__pestana-container"> <p className="header__navbar__icon-tag" >Productos</p> <CgShoppingBag className="header__navbar__icons font-color-40"/> {/*  <img className="header__navbar__pestana__icon"  alt="icon" src={pestañaIcon} /> */}   </div>
+                    <Link to="/products" className="flex-row-center header__navbar__pestana-container"> <p  className="header__navbar__icon-tag" >Productos</p> <CgShoppingBag className="header__navbar__icons font-color-40"/> {/*  <img className="header__navbar__pestana__icon"  alt="icon" src={pestañaIcon} /> */}   </Link>
                     <div className="flex-row-center"> <p className="header__navbar__icon-tag" >Contacto</p> <BsTelephone className="header__navbar__icons font-color-40"/>  </div>
                 </div>
 
